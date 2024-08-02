@@ -22,7 +22,7 @@ Follow these instructions to get a copy of the project up and running on your lo
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/quality-education.git
+   git clone https://metoric-meto.github.io/QUALITY-EDUCATION
 cd quality-education
 npm install
 pip install -r requirements.txt
