@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - QUALITY EDUCATION</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cuprum:wght@500;600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+  <link rel="icon" href="Images\fologo.png" type="image/x-icon">
+  <style>
+    /* Reset some default styles */
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f8f9fa;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Main Content */
+.main {
+  padding: 2rem 0;
+}
+
+/* Contact Us Section */
+.section {
+  padding: 4rem 0;
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.section-subtitle {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+.section-text {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.contact-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+}
+
+.contact-item ion-icon {
+  font-size: 2rem;
+  color: #007bff;
+  margin-right: 1rem;
+}
+
+.contact-details {
+  max-width: 200px;
+}
+
+.contact-title {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.contact-text {
+  font-size: 1rem;
+  color: #666;
+}
+
+.contact-form {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-label {
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.form-input,
+.form-textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.form-textarea {
+  resize: vertical;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+/* Footer */
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 2rem 0;
+}
+
+.footer-top {
+  padding: 2rem 0;
+}
+
+.footer-brand {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.footer-brand .logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.footer-text {
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: #ddd;
+}
+
+.newsletter-form {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.newsletter-form input[type="email"] {
+  padding: 0.75rem;
+  border: none;
+  border-radius: 5px 0 0 5px;
+  font-size: 1rem;
+}
+
+.newsletter-form button[type="submit"] {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 1rem;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.newsletter-form button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+.footer-bottom {
+  background-color: #222;
+  padding: 1rem 0;
+  text-align: center;
+}
+
+.footer-bottom p {
+  margin: 0;
+  font-size: 0.875rem;
+  color: #aaa;
+}
+
+.footer-bottom a {
+  color: #fff;
+  font-size: 0.875rem;
+}
+
+.footer-bottom a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .contact-info {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-item {
+    margin-bottom: 1.5rem;
+  }
+
+  .contact-item:last-child {
+    margin-bottom: 0;
+  }
+}
+
+
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header" data-header>
+    <div class="container">
+      <a href="index.html" class="logo">QUALITY EDUCATION</a>
+      <nav class="navbar" data-navbar>
+        <div class="wrapper">
+          <a href="index.html" class="logo">QUALITY EDUCATION</a>
+          <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
+            <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+          </button>
+        </div>
+        <ul class="navbar-list">
+          <li><a href="index.html" class="navbar-link" data-nav-link>Home</a></li>
+          <li><a href="about.html" class="navbar-link" data-nav-link>About</a></li>
+          <li><a href="services.html" class="navbar-link" data-nav-link>Courses</a></li>
+          <li><a href="features.html" class="navbar-link" data-nav-link>Features</a></li>
+          <li><a href="blog.html" class="navbar-link" data-nav-link>Blog</a></li>
+          <li><a href="contact.html" class="navbar-link" data-nav-link>Contact Us</a></li>
+        </ul>
+      </nav>
+      <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+        <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
+      </button>
+      <a href="anim.html" class="btn-outline">Log In</a>
+      <div class="overlay" data-nav-toggler data-overlay></div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <article>
+      <!-- Contact Us Section -->
+      <section class="section contact" id="contact" aria-label="contact">
+        <div class="container">
+            <br><br><br>
+          <p class="section-subtitle text-center">-Get in Touch-</p>
+          <h2 class="h2 section-title text-center">Contact Us</h2>
+          <p class="section-text text-center">
+            We're here to help. Reach out to us with any questions or concerns you may have.
+          </p>
+
+          <div class="contact-info">
+            <div class="contact-item">
+              <ion-icon name="location-outline" aria-hidden="true"></ion-icon>
+              <div class="contact-details">
+                <h3 class="h3 contact-title">Our Address</h3>
+                <address class="contact-text">
+                  Jalgaon , Maharashtra , 425001
+                </address>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <ion-icon name="call-outline" aria-hidden="true"></ion-icon>
+              <div class="contact-details">
+                <h3 class="h3 contact-title">Phone Number</h3>
+                <a href="tel:+789463154" class="contact-text">+918600179669</a>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
+              <div class="contact-details">
+                <h3 class="h3 contact-title">Email Address</h3>
+                <a href="mailto:info@webtutorial.com" class="contact-text">info@qualityeducation.com</a>
+              </div>
+            </div>
+          </div>
+
+          <form action="#" method="post" class="contact-form">
+            <h3 class="h3 form-title">Send Us a Message</h3>
+            <div class="form-group">
+              <label for="name" class="form-label">Name</label>
+              <input type="text" id="name" name="name" class="form-input" required>
+            </div>
+            <div class="form-group">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" id="email" name="email" class="form-input" required>
+            </div>
+            <div class="form-group">
+              <label for="message" class="form-label">Message</label>
+              <textarea id="message" name="message" class="form-textarea" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+          </form>
+        </div>
+      </section>
+    </article>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" style="background-color: #333; color: white; padding: 20px 0;">
+    <div class="footer-top section" style="padding: 40px 0;">
+      <div class="container" style="width: 80%; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between;">
+        <div class="footer-brand" style="flex: 1; min-width: 250px;">
+          <a href="index.html" class="logo" style="color: white; text-decoration: none; font-size: 24px; display: block; margin-bottom: 10px;">QUALITY EDUCATION</a>
+          <p class="footer-text" style="color: #ccc; font-size: 14px;">Quality education transforms lives. We provide innovative learning that empowers individuals and opens doors to success for all.</p>
+        </div>
+        <div class="footer-links" style="flex: 1; min-width: 200px;">
+          <h4 style="font-size: 18px; margin-bottom: 10px;">Quick Links</h4>
+          <ul style="list-style: none; padding: 0;">
+            <li style="margin-bottom: 5px;"><a href="index.html" style="color: white; text-decoration: none;">Home</a></li>
+            <li style="margin-bottom: 5px;"><a href="about.html" style="color: white; text-decoration: none;">About</a></li>
+            <li style="margin-bottom: 5px;"><a href="services.html" style="color: white; text-decoration: none;">Services</a></li>
+            <li style="margin-bottom: 5px;"><a href="features.html" style="color: white; text-decoration: none;">Features</a></li>
+            <li style="margin-bottom: 5px;"><a href="blog.html" style="color: white; text-decoration: none;">Blog</a></li>
+            <li style="margin-bottom: 5px;"><a href="contact.html" style="color: white; text-decoration: none;">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact" style="flex: 1; min-width: 200px;">
+          <h4 style="font-size: 18px; margin-bottom: 10px;">Contact Us</h4>
+          <p style="font-size: 14px; margin: 5px 0;">123 Education Lane<br>Knowledge City, Edu 45678</p>
+          <p style="font-size: 14px; margin: 5px 0;">Email: info@qualityeducation.com</p>
+          <p style="font-size: 14px; margin: 5px 0;">Phone: (123) 456-7890</p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom" style="background-color: #222; padding: 10px 0; text-align: center; border-top: 1px solid #000;">
+      <p style="margin: 0; font-size: 14px; color: #ccc;">&copy; 2024 QUALITY EDUCATION. All rights reserved.</p>
+    </div>
+  </footer>
+  
+  <script src="js/script.js"></script>
+  <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog - WebTutorial</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cuprum:wght@500;600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+  <link rel="icon" href="Images\fologo.png" type="image/x-icon">
+  
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      margin: 0;
+    }
+    main {
+      flex: 1;
+    }
+    .footer {
+      background-color: #333;
+      color: white;
+      padding: 20px 0;
+    }
+    .footer-top {
+      padding: 40px 0;
+    }
+    .footer .container {
+      width: 80%;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    .footer a {
+      color: white;
+      text-decoration: none;
+    }
+    .footer p, .footer h4 {
+      margin: 0;
+      color: #ccc;
+    }
+    .footer-bottom {
+      background-color: #222;
+      padding: 10px 0;
+      text-align: center;
+      border-top: 1px solid #000;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header" data-header>
+    <div class="container">
+      <a href="index.html" class="logo">QUALITY EDUCATION</a>
+      <nav class="navbar" data-navbar>
+        <div class="wrapper">
+          <a href="index.html" class="logo">QUALITY EDUCATION</a>
+          <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
+            <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+          </button>
+        </div>
+        <ul class="navbar-list">
+          <li><a href="index.html" class="navbar-link" data-nav-link>Home</a></li>
+          <li><a href="about.html" class="navbar-link" data-nav-link>About</a></li>
+          <li><a href="services.html" class="navbar-link" data-nav-link>Courses</a></li>
+          <li><a href="features.html" class="navbar-link" data-nav-link>Features</a></li>
+          <li><a href="blog.html" class="navbar-link" data-nav-link>Blog</a></li>
+          <li><a href="contact.html" class="navbar-link" data-nav-link>Contact Us</a></li>
+        </ul>
+      </nav>
+      <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+        <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
+      </button>
+      <a href="anim.html" class="btn-outline">Log In</a>
+      <div class="overlay" data-nav-toggler data-overlay></div>
+    </div>
+  </header>
+
+<!-- Main Content -->
+<main>
+  <article>
+    <!-- Blog Section -->
+    <section class="section blog" id="blog" aria-label="blog">
+      <div class="container">
+        <h2 class="h2-sm section-title">Our Blog</h2>
+        <p class="section-text">Quality education empowers individuals, fosters innovation, and drives societal progress. It is the key to unlocking potential and building a brighter future for all.</p>
+        <div class="blog-posts">
+          <article class="blog-post">
+            <h3 class="blog-post-title">
+              <a href="https://www.right-to-education.org/blog/key-principles-guide-new-developments-right-education" target="_blank">Key Principles to Guide New Developments in the Right to Education</a>
+            </h3>
+            <p class="blog-post-text">Explore the key principles guiding the right to education and how they influence new developments in the field.</p>
+          </article>
+          <article class="blog-post">
+            <h3 class="blog-post-title">
+              <a href="https://schoolofscholars.edu.in/blog/ai-learning-in-classrooms/" target="_blank">AI Learning in Classrooms</a>
+            </h3>
+            <p class="blog-post-text">Discover how AI is transforming learning environments and its impact on classroom education.</p>
+          </article>
+          <article class="blog-post">
+            <h3 class="blog-post-title">
+              <a href="https://schoolofscholars.edu.in/blog/understanding-design-based-learning-in-school-education/" target="_blank">Understanding Design-Based Learning in School Education</a>
+            </h3>
+            <p class="blog-post-text">Learn about design-based learning and its role in enhancing school education.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </article>
+</main>
+
+
+ <!-- Footer -->
+<footer class="footer" style="background-color: #333; color: white; padding: 20px 0;">
+  <div class="footer-top section" style="padding: 40px 0;">
+      <div class="container" style="width: 80%; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between;">
+          <div class="footer-brand" style="flex: 1; min-width: 250px;">
+              <a href="index.html" class="logo" style="color: white; text-decoration: none; font-size: 24px; display: block; margin-bottom: 10px;">QUALITY EDUCATION</a>
+              <p class="footer-text" style="color: #ccc; font-size: 14px;">Quality education transforms lives. We provide innovative learning that empowers individuals and opens doors to success for all.</p>
+          </div>
+          <div class="footer-links" style="flex: 1; min-width: 200px;">
+              <h4 style="font-size: 18px; margin-bottom: 10px;">Quick Links</h4>
+              <ul style="list-style: none; padding: 0;">
+                  <li style="margin-bottom: 5px;"><a href="index.html" style="color: white; text-decoration: none;">Home</a></li>
+                  <li style="margin-bottom: 5px;"><a href="about.html" style="color: white; text-decoration: none;">About</a></li>
+                  <li style="margin-bottom: 5px;"><a href="services.html" style="color: white; text-decoration: none;">Services</a></li>
+                  <li style="margin-bottom: 5px;"><a href="features.html" style="color: white; text-decoration: none;">Features</a></li>
+                  <li style="margin-bottom: 5px;"><a href="blog.html" style="color: white; text-decoration: none;">Blog</a></li>
+                  <li style="margin-bottom: 5px;"><a href="contact.html" style="color: white; text-decoration: none;">Contact Us</a></li>
+              </ul>
+          </div>
+          <div class="footer-contact" style="flex: 1; min-width: 200px;">
+              <h4 style="font-size: 18px; margin-bottom: 10px;">Contact Us</h4>
+              <p style="font-size: 14px; margin: 5px 0;">123 Education Lane<br>Knowledge City, Edu 45678</p>
+              <p style="font-size: 14px; margin: 5px 0;">Email: info@qualityeducation.com</p>
+              <p style="font-size: 14px; margin: 5px 0;">Phone: (123) 456-7890</p>
+          </div>
+      </div>
+  </div>
+  <div class="footer-bottom" style="background-color: #222; padding: 10px 0; text-align: center; border-top: 1px solid #000;">
+      <p style="margin: 0; font-size: 14px; color: #ccc;">&copy; 2024 QUALITY EDUCATION. All rights reserved.</p>
+  </div>
+</footer>
+
+
+<script src="js/script.js"></script>
+  <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons.js"></script>
+</body>
+</html>

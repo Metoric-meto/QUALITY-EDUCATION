@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Login and Registration Form</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="Images/fologo.png" type="image/x-icon">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #99bdda, #e0e9d2);
+        }
+
+        .header {
+            width: 100%;
+            background-color: #fff;
+            color: #333;
+            padding: 15px 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        .header .logo {
+            color: #333;
+            text-decoration: none;
+            font-size: 28px;
+            font-weight: 600;
+        }
+
+        .header .navbar {
+            display: flex;
+        }
+
+        .header .navbar ul {
+            display: flex;
+            list-style: none;
+        }
+
+        .header .navbar li {
+            margin: 0 15px;
+        }
+
+        .header .navbar a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .header .navbar a:hover {
+            color: #007bff;
+        }
+
+        .header .btn-outline {
+            padding: 8px 16px;
+            border: 2px solid #333;
+            color: #333;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 500;
+            margin-left: 20px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .header .btn-outline:hover {
+            background-color: #333;
+            color: #fff;
+        }
+
+        .main-content {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            margin: 80px 0;
+        }
+
+        .wrapper {
+            position: relative;
+            width: 100%;
+            max-width: 400px;
+            height: 500px;
+            margin: 0 auto;
+        }
+
+        .form-wrapper {
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            background: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .wrapper.animate-signUp .form-wrapper.sign-in {
+            transform: rotate(7deg);
+            animation: animateRotate .7s ease-in-out forwards;
+            animation-delay: .3s;
+        }
+
+        .wrapper.animate-signIn .form-wrapper.sign-in {
+            animation: animateSignIn 1.5s ease-in-out forwards;
+        }
+
+        @keyframes animateSignIn {
+            0% {
+                transform: translateX(0);
+            }
+            50% {
+                transform: translateX(-500px);
+            }
+            100% {
+                transform: translateX(0) rotate(7deg);
+            }
+        }
+
+        .wrapper .form-wrapper.sign-up {
+            transform: rotate(7deg);
+        }
+
+        .wrapper.animate-signIn .form-wrapper.sign-up {
+            animation: animateRotate .7s ease-in-out forwards;
+            animation-delay: .3s;
+        }
+
+        @keyframes animateRotate {
+            0% {
+                transform: rotate(7deg);
+            }
+            100% {
+                transform: rotate(0);
+                z-index: 1;
+            }
+        }
+
+        .wrapper.animate-signUp .form-wrapper.sign-up {
+            animation: animateSignUp 1.5s ease-in-out forwards;
+        }
+
+        @keyframes animateSignUp {
+            0% {
+                transform: translateX(0);
+                z-index: 1;
+            }
+            50% {
+                transform: translateX(500px);
+            }
+            100% {
+                transform: translateX(0) rotate(7deg);
+            }
+        }
+
+        h2 {
+            font-size: 24px;
+            color: #555;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .input-group {
+            position: relative;
+            width: 90%;
+            margin: 15px 0;
+        }
+
+        .input-group label {
+            position: absolute;
+            top: 50%;
+            left: 10px;
+            transform: translateY(-50%);
+            font-size: 14px;
+            color: #352828;
+            padding: 0 5px;
+            pointer-events: none;
+            transition: .5s;
+        }
+
+        .input-group input {
+            width: 100%;
+            height: 40px;
+            font-size: 16px;
+            color: #333;
+            padding: 0 15px;
+            background: transparent;
+            border: 1px solid #333;
+            outline: none;
+            border-radius: 5px;
+        }
+
+        .input-group input:focus ~ label,
+        .input-group input:valid ~ label {
+            top: 0;
+            font-size: 12px;
+            background: #fff;
+        }
+
+        .forgot-pass {
+            margin: 10px 0 20px;
+            text-align: center;
+        }
+
+        .forgot-pass a {
+            color: #333;
+            font-size: 14px;
+            text-decoration: none;
+            transition: text-decoration 0.3s;
+        }
+
+        .forgot-pass a:hover {
+            text-decoration: underline;
+        }
+
+        .btn {
+            width: 100%;
+            height: 40px;
+            background: linear-gradient(to right, #2196f3, #bee19c);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, .4);
+            font-size: 16px;
+            color: #fff;
+            font-weight: 500;
+            cursor: pointer;
+            border-radius: 5px;
+            border: none;
+            outline: none;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background: linear-gradient(to right, #1e88e5, #a5d6a7);
+        }
+
+        .sign-link {
+            font-size: 14px;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .sign-link p {
+            color: #69be8c;
+        }
+
+        .sign-link p a {
+            color: #79a0e7;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .sign-link p a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .wrapper {
+                width: 100%;
+                height: auto;
+            }
+
+            .input-group {
+                width: 100%;
+            }
+        }
+
+        .footer {
+            width: 100%;
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+            position: relative;
+            bottom: 0;
+        }
+
+        .footer .footer-top {
+            padding: 40px 0;
+        }
+
+        .footer .footer-top .container {
+            width: 80%;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .footer .footer-brand {
+            flex: 1;
+            min-width: 250px;
+        }
+
+        .footer .footer-brand .logo {
+            color: white;
+            text-decoration: none;
+            font-size: 24px;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .footer .footer-text {
+            color: #ccc;
+            font-size: 14px;
+        }
+
+        .footer .footer-links {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .footer .footer-links h4 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .footer .footer-links ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer .footer-links ul li {
+            margin-bottom: 5px;
+        }
+
+        .footer .footer-links ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .footer .footer-links ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .footer .footer-contact {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .footer .footer-contact h4 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .footer .footer-contact p {
+            font-size: 14px;
+            margin: 5px 0;
+        }
+
+        .footer .footer-bottom {
+            background-color: #222;
+            padding: 10px 0;
+            text-align: center;
+            border-top: 1px solid #000;
+        }
+
+        .footer .footer-bottom p {
+            margin: 0;
+            font-size: 14px;
+            color: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">QUALITY EDUCATION</a>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Courses</a></li>
+                    <li><a href="features.html">Features</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="wrapper">
+            <div class="form-wrapper sign-up">
+                <form action="">
+                    <h2>Sign Up</h2>
+                    <div class="input-group">
+                        <input type="text" required>
+                        <label for="">Username</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="email" required>
+                        <label for="">Email</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="password" required>
+                        <label for="">Password</label>
+                    </div>
+                    <button type="submit" class="btn">Sign Up</button>
+                    <div class="sign-link">
+                        <p>Already have an account? <a href="#" class="signIn-link">Sign In</a></p>
+                    </div>
+                </form>
+            </div>
+
+            <div class="form-wrapper sign-in">
+                <form action="">
+                    <h2>Login</h2>
+                    <div class="input-group">
+                        <input type="text" required>
+                        <label for="">Username</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="password" required>
+                        <label for="">Password</label>
+                    </div>
+                    <div class="forgot-pass">
+                        <a href="#">Forgot Password?</a>
+                    </div>
+                    <button type="submit" class="btn">Login</button>
+                    <div class="sign-link">
+                        <p>Don't have an account? <a href="#" class="signUp-link">Sign Up</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-top section">
+            <div class="container">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">QUALITY EDUCATION</a>
+                    <p class="footer-text">Quality education transforms lives. We provide innovative learning that empowers individuals and opens doors to success for all.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="features.html">Features</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact Us</h4>
+                    <p>123 Education Lane<br>Knowledge City, Edu 45678</p>
+                    <p>Email: info@qualityeducation.com</p>
+                    <p>Phone: (123) 456-7890</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 QUALITY EDUCATION. All rights reserved.</p>
+        </div>
+    </footer>
+    <script>
+      // Wait for the DOM to fully load before executing script
+      document.addEventListener('DOMContentLoaded', function() {
+          const signUpLink = document.querySelector('.signIn-link');
+          const signInLink = document.querySelector('.signUp-link');
+          const wrapper = document.querySelector('.wrapper');
+  
+          // Toggle between sign up and sign in
+          signUpLink.addEventListener('click', function() {
+              wrapper.classList.add('animate-signUp');
+              wrapper.classList.remove('animate-signIn');
+          });
+  
+          signInLink.addEventListener('click', function() {
+              wrapper.classList.add('animate-signIn');
+              wrapper.classList.remove('animate-signUp');
+          });
+      });
+  </script>
+  
+</body>
+</html>
