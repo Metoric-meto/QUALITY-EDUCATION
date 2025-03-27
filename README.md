@@ -1,4 +1,6 @@
-# QUALITY EDUCATION  https://metoric-meto.github.io/QUALITY-EDUCATION/
+# QUALITY EDUCATION  
+
+* [Website](https://metoric-meto.github.io/QUALITY-EDUCATION/)
 
 ## Project Overview
 
